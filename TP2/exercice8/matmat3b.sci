@@ -8,7 +8,7 @@ function [C] = matmat3b(A, B)
     m = size(A, "r")
     n = size(B, "c")
     C = zeros(m,n)
-    if (p1 == p2) then 
+    if (p1 == p2) then //On vérifie que les matrices entrées par l’utilisateur sont bien conformes au produit que l’on veut faire
         for i = 1 : m
             for j = 1 : n
                 for k = 1 : p1 
