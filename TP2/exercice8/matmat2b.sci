@@ -8,7 +8,7 @@ function [C] = matmat2b(A, B)
     m = size(A, "r")
     n = size(B, "c")
     C = zeros(m,n)
-    if (p1 == p2) then 
+    if (p1 == p2) then //Conformité des tailles de matrice
         for i = 1 : m
             for j = 1 : n
                 C(i,j) = A(i,:) * B(:,j) + C(i,j);
