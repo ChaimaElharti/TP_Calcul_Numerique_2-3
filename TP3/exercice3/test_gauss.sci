@@ -1,8 +1,8 @@
-function[] = test_gauss(A,b) 
-
 A = rand(10,10)
 xex = rand(10,1)
 b = A * xex
+
+function[] = test_gauss(A,b) 
 
 [x] = gausskij3b(A,b) 
 
