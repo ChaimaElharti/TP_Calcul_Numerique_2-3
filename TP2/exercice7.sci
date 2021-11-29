@@ -1,5 +1,7 @@
+//Cette fonction répond à toutes les questions de l'exercice 
+//et pour faire varier la taille de matrice, on change seulement n dans le for. 
 function[] = resolution(A)
-for n = 100
+for n = 3
     A = rand(n,n)
     xex = rand(n,1)
     b = A* xex
