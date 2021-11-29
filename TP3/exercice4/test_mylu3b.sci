@@ -1,6 +1,7 @@
+A = rand(10,10)
+
 function[L,U] = test_mylu3b(A)
 
-A = rand(10,10)
 [L,U] = mylu3b(A)
 
 if L==tril(L) then 
