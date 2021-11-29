@@ -18,4 +18,8 @@ for i=1:n
         disp("Il y a bien des 1 sur la diagonale de L")
     end 
 end 
+
+err_comm = A-L*U
+disp(max(err_comm))
+
 endfunction
