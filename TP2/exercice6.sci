@@ -12,6 +12,8 @@ size(y)
 
 //Question 5
 norm(x)
+//Par défaut, lorsqu'on ne précise pas quelle norme il faut appliquer
+//à notre argument, c'est la norme 2 qui est appliquée. 
 
 //Question 6
 A = [1,2,3;
