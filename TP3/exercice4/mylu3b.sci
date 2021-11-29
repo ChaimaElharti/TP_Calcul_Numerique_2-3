@@ -13,8 +13,11 @@ end
 
 
 L = tril(A)
+
+/* on impose que la diagonale de la matrice triangulaire inférieure 
+ait des coefficients valant 1*/
 for i=1:n
-    L(i,i) = 1
+    L(i,i) = 1 
 end
 
 U = triu(A);
