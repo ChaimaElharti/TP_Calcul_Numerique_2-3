@@ -1,16 +1,25 @@
-function[] = test_mylu(A)
+function []=test_mylu1b(A)
 
-A = rand(10,10)
 
-[Lth, Uth, Pth] = lu(A)
-[Lexp, Uexp, Pexp] = mylu(A)
+[L,U] = mylu1b(A)
 
-err_L = norm((Lth-Lexp) / Lth)
-err_U = norm((Uth-Uexp) / Uth)
-err_P = norm((Pth-Pexp) / Pth)
+if L==tril(L) then 
+    disp("L est bien triangulaire inférieure")
+end 
 
-disp(err_L, err_U, err_P)
+if U==triu(U) then 
+    disp("U est bien triangulaire supérieure")
+end 
 
-endfunction 
+n = size(L,"r")
+for i=1:n
+    if L(i,i)==1 then
+        disp("Il y a bien des 1 sur la diagonale de L")
+    end 
+end 
+
+err_comm = norm((A-L*U)/A)
+disp((err_comm))
+endfunction
 
 
