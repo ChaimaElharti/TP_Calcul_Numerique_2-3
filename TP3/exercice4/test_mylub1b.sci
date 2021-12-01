@@ -1,18 +1,16 @@
-function []=test_mylu1b(A)
+function[] = test_mylu(A)
 
 A = rand(10,10)
 
-[L3b,U3b] = mylu3b(A)
-[L1b,U1b] = mylu1b(A)
+[Lth, Uth, Pth] = lu(A)
+[Lexp, Uexp, Pexp] = mylu(A)
 
+err_L = norm((Lth-Lexp) / Lth)
+err_U = norm((Uth-Uexp) / Uth)
+err_P = norm((Pth-Pexp) / Pth)
 
-disp(L3b==L1b)
+disp(err_L, err_U, err_P)
 
-
-if (U3b==U1b) then
-    disp("Résultats conformes")
-end
-
-endfunction
+endfunction 
 
 
