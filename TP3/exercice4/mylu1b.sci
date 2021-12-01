@@ -1,10 +1,8 @@
 function [L,U] = mylu1b(A)
 n = size(A,"r")
 for k=1:n-1
-    for i=k+1:n
-        A(i,k) = A(i,k)/A(k,k);
-        A(i,:) = A(i,:) - A(i,k) * A(k,:);
-    end
+    A(k+1:n,k) = A(k+1:n,k)/A(k,k);
+    A(k+1:n,k+1:n) = A(k+1:n,k+1:n) - A(k+1:n,k) * A(k,k+1:n);
 end
 
 L = tril(A)
