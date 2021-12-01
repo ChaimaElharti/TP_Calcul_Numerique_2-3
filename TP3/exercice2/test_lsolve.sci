@@ -1,7 +1,8 @@
-function[] = test_lsolve(L,b) 
 L = tril(rand(10,10))
 xex = rand(10,1)
 b = L * xex
+
+function[] = test_lsolve(L,b) 
 
 if tril(L)==L then
     disp("Matrice conforme")
