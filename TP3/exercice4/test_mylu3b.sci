@@ -19,7 +19,7 @@ for i=1:n
     end 
 end 
 
-err_comm = A-L*U
-disp(max(err_comm))
-
+err_comm = norm((A-L*U) / A)
+disp(err_comm)
 endfunction
+
