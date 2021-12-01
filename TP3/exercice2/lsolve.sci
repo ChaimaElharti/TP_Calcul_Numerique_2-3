@@ -8,6 +8,5 @@ function[x] = lsolve(L,b)
     end
 end
 endfunction
-..
 
 
