@@ -9,6 +9,7 @@ s = x*y
 //Question 4
 size(x)
 size(y)
+// Cette fonction permet de déterminer la taille de nos vecteurs. 
 
 //Question 5
 norm(x)
@@ -32,3 +33,4 @@ B*A
 
 //Question 9
 cond(A)
+// Nous renseigne sur la capacité pour A à générer de l'erreur. 
