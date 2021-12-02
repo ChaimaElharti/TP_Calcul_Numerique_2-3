@@ -1,3 +1,6 @@
+A = rand(750,750)
+tic()
+
 function [L, U] = mylu3b(A)
 n = size(A,"r")
 for k=1:n-1
@@ -23,3 +26,5 @@ end
 U = triu(A);
 
 endfunction
+t3b = toc()
+disp(t3b)

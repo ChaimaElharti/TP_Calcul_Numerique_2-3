@@ -1,5 +1,6 @@
-function []=test_mylu1b(A)
+A = rand(2,2)
 
+function []=test_mylu1b(A)
 
 [L,U] = mylu1b(A)
 
@@ -20,6 +21,10 @@ end
 
 err_comm = norm((A-L*U)/A)
 disp((err_comm))
+
+disp(cond(U))
+disp(cond(L))
 endfunction
+
 
 

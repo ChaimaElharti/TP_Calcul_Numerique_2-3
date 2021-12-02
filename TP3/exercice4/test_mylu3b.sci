@@ -1,4 +1,4 @@
-A = rand(10,10)
+A = rand(3,3)
 
 function[L,U] = test_mylu3b(A)
 
@@ -22,4 +22,6 @@ end
 err_comm = norm((A-L*U) / A)
 disp(err_comm)
 endfunction
+
+
 

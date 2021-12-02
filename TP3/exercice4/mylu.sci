@@ -1,4 +1,7 @@
+A = rand(800,800)
+tic()
 function [L, U, P] = mylu(A)
+
     n = size(A,"r")
     for i = 1:n
         Piv(i) = i;
@@ -34,3 +37,5 @@ for i = 1:n
     L(i,i) = 1
 end
 endfunction 
+t = toc()
+disp(t)

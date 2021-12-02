@@ -1,3 +1,6 @@
+A = rand(1000,1000)
+tic()
+
 function [L,U] = mylu1b(A)
 
 n = size(A,"r")
@@ -16,3 +19,5 @@ end
 U = triu(A);
 
 endfunction
+t1 = toc()
+disp(t1)
