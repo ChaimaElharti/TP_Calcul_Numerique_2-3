@@ -19,5 +19,6 @@ end
 U = triu(A);
 
 endfunction
+
 t1 = toc()
 disp(t1)
